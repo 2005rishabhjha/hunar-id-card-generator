@@ -58,7 +58,7 @@
   .btn {
     width: 100%;
     padding: 13px;
-    background: #17171a;
+    background: #071A33;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -66,14 +66,15 @@
     font-weight: 600;
     cursor: pointer;
     margin-top: 6px;
+    transition: background 0.2s ease;
   }
-  .btn:hover { background: #2c2c2a; }
+  .btn:hover { background: #0B2A52; }
   .btn.secondary {
     background: #fff;
-    color: #17171a;
-    border: 1px solid #ccc;
+    color: #071A33;
+    border: 1px solid #cbd5e1;
   }
-  .btn.secondary:hover { background: #f5f5f5; }
+  .btn.secondary:hover { background: #f8fafc; border-color: #94a3b8; }
   .preview-panel {
     flex: 1;
     min-width: 300px;
@@ -86,7 +87,7 @@
     width: 100%;
     max-width: 300px;
     border-radius: 14px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    box-shadow: 0 10px 30px rgba(7, 26, 51, 0.22), 0 2px 8px rgba(0, 0, 0, 0.08);
   }
   .download-row {
     display: flex;
@@ -179,7 +180,18 @@
 const HUNAR_LOGO_SRC = "data:image/png;base64,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";
 const W = 590, H = 1055;
 const SCALE = 4;
-const GREEN = '#37e88a';
+// Color Palette: Hunar Corporate Tech Aesthetic
+const COLOR_PRIMARY_BG = '#071A33';       // Deep midnight navy base
+const COLOR_PRIMARY_DARK = '#051329';     // Darker navy for gradient bottom
+const COLOR_PRIMARY_LIGHT = '#0B2A52';    // Lighter navy for gradient top
+const COLOR_SECONDARY_BLUE = '#123E73';   // Mid-tone corporate royal navy
+const COLOR_ACCENT_CYAN = '#38BDF8';      // Electric cyan / sky blue
+const COLOR_ACCENT_TEAL = '#22D3EE';      // Bright cyan accent
+const COLOR_ACCENT_VIOLET = '#6366F1';    // Subtle blue-violet highlight
+const COLOR_TEXT_WHITE = '#FFFFFF';       // Primary text
+const COLOR_TEXT_LIGHT = '#E2E8F0';       // Secondary text / designation
+const COLOR_TEXT_MUTED = '#94A3B8';       // Meta labels / slate blue
+
 const frontCanvas = document.getElementById('frontCanvas');
 const backCanvas = document.getElementById('backCanvas');
 const fctx = frontCanvas.getContext('2d');
@@ -223,25 +235,93 @@ function roundedRect(ctx, x, y, w, h, r) {
   ctx.closePath();
 }
 
+function drawCardBackground(ctx) {
+  // 1. Deep midnight navy gradient for subtle depth
+  const bgGrad = ctx.createLinearGradient(0, 0, W, H);
+  bgGrad.addColorStop(0, '#092142');
+  bgGrad.addColorStop(0.35, '#071A33');
+  bgGrad.addColorStop(1, '#041021');
+  ctx.fillStyle = bgGrad;
+  ctx.fillRect(0, 0, W, H);
+
+  // 2. Subtle radial glows for ambient lighting
+  // Top-right glow near the particles and branding
+  const glowTopRight = ctx.createRadialGradient(W * 0.85, 180, 10, W * 0.85, 180, 360);
+  glowTopRight.addColorStop(0, 'rgba(56, 189, 248, 0.12)');
+  glowTopRight.addColorStop(0.4, 'rgba(18, 62, 115, 0.22)');
+  glowTopRight.addColorStop(1, 'rgba(7, 26, 51, 0)');
+  ctx.fillStyle = glowTopRight;
+  ctx.fillRect(0, 0, W, H);
+
+  // Mid-left soft ambient glow
+  const glowMidLeft = ctx.createRadialGradient(60, 480, 10, 60, 480, 320);
+  glowMidLeft.addColorStop(0, 'rgba(18, 62, 115, 0.28)');
+  glowMidLeft.addColorStop(0.6, 'rgba(11, 42, 82, 0.12)');
+  glowMidLeft.addColorStop(1, 'rgba(7, 26, 51, 0)');
+  ctx.fillStyle = glowMidLeft;
+  ctx.fillRect(0, 0, W, H);
+
+  // 3. Subtle micro-dot geometric tech matrix in background
+  ctx.save();
+  ctx.fillStyle = 'rgba(56, 189, 248, 0.035)';
+  const dotSpacing = 28;
+  for (let x = 30; x < W - 30; x += dotSpacing) {
+    for (let y = 30; y < H - 30; y += dotSpacing) {
+      ctx.beginPath();
+      ctx.arc(x, y, 1.2, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+  ctx.restore();
+}
+
 function drawChecker(ctx, startX, startY, cols, rows, size, gap) {
-  ctx.fillStyle = GREEN;
+  // Sophisticated electric cyan / sky blue palette with subtle tonal variations
+  const squareColors = [
+    '#38BDF8', // bright electric sky blue
+    '#22D3EE', // electric cyan
+    '#0EA5E9', // vibrant ocean cyan
+    '#67E8F9', // soft light cyan
+    '#38BDF8', // sky blue
+    '#6366F1', // subtle blue-violet highlight
+    '#22D3EE', // cyan
+    '#0284C7', // deep tech cyan
+    '#38BDF8'  // sky blue
+  ];
+
+  ctx.save();
+  ctx.shadowColor = 'rgba(34, 211, 238, 0.28)';
+  ctx.shadowBlur = 8;
+
+  let squareIndex = 0;
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < cols; c++) {
       if ((r + c) % 2 === 0) {
-        ctx.fillRect(startX + c * (size + gap), startY + r * (size + gap), size, size);
+        const color = squareColors[squareIndex % squareColors.length];
+        ctx.fillStyle = color;
+        const x = startX + c * (size + gap);
+        const y = startY + r * (size + gap);
+
+        roundedRect(ctx, x, y, size, size, 4);
+        ctx.fill();
+        squareIndex++;
       }
     }
   }
+  ctx.restore();
 }
 
 function drawSwirl() {
   fctx.save();
-  fctx.strokeStyle = '#2a2a2a';
+  // Primary arc in refined royal navy with subtle opacity
+  fctx.strokeStyle = 'rgba(18, 62, 115, 0.55)';
   fctx.lineWidth = 34;
   fctx.beginPath();
   fctx.arc(280, 330, 260, Math.PI * 1.05, Math.PI * 2.1);
   fctx.stroke();
-  fctx.strokeStyle = '#1c1c1c';
+
+  // Secondary arc in deeper navy for subtle depth
+  fctx.strokeStyle = 'rgba(11, 42, 82, 0.70)';
   fctx.lineWidth = 20;
   fctx.beginPath();
   fctx.arc(310, 470, 300, Math.PI * 1.2, Math.PI * 1.95);
@@ -252,7 +332,7 @@ function drawSwirl() {
 function drawWatermark(ctx) {
   if (!hunarLogoImg) return;
   ctx.save();
-  ctx.globalAlpha = 0.07;
+  ctx.globalAlpha = 0.055;
   const wmW = 520;
   const wmH = wmW * (hunarLogoImg.height / hunarLogoImg.width);
   ctx.translate(W / 2, H / 2);
@@ -264,8 +344,9 @@ function drawFront() {
   fctx.setTransform(1, 0, 0, 1, 0, 0);
   fctx.clearRect(0, 0, frontCanvas.width, frontCanvas.height);
   fctx.setTransform(SCALE, 0, 0, SCALE, 0, 0);
-  fctx.fillStyle = '#0a0a0a';
-  fctx.fillRect(0, 0, W, H);
+
+  // Background with subtle depth and navy gradient
+  drawCardBackground(fctx);
   fctx.textBaseline = 'top';
 
   drawSwirl();
@@ -281,10 +362,17 @@ function drawFront() {
 
   const boxX = 44, boxY = 258, boxW = 340, boxH = 330, radius = 60;
   fctx.save();
-  fctx.fillStyle = GREEN;
+
+  // 1. Photo container background: rich deep navy gradient
+  const photoBg = fctx.createLinearGradient(boxX, boxY, boxX + boxW, boxY + boxH);
+  photoBg.addColorStop(0, '#0F2F57');
+  photoBg.addColorStop(1, '#091E38');
+  fctx.fillStyle = photoBg;
   roundedRect(fctx, boxX, boxY, boxW, boxH, radius);
   fctx.fill();
 
+  // 2. Photo content (or refined placeholder avatar when not yet uploaded)
+  fctx.save();
   roundedRect(fctx, boxX, boxY, boxW, boxH, radius);
   fctx.clip();
   if (uploadedPhoto) {
@@ -299,11 +387,45 @@ function drawFront() {
     const ix = boxX + (boxW - iw) / 2;
     const iy = boxY - (ih - boxH) * posFrac;
     fctx.drawImage(uploadedPhoto, ix, iy, iw, ih);
+  } else {
+    // Elegant placeholder silhouette when no photo is uploaded yet
+    fctx.fillStyle = 'rgba(56, 189, 248, 0.18)';
+    // Head circle
+    fctx.beginPath();
+    fctx.arc(boxX + boxW / 2, boxY + 125, 48, 0, Math.PI * 2);
+    fctx.fill();
+    // Shoulder arc
+    fctx.beginPath();
+    fctx.arc(boxX + boxW / 2, boxY + 285, 95, Math.PI * 1.15, Math.PI * 1.85);
+    fctx.lineTo(boxX + boxW, boxY + boxH);
+    fctx.lineTo(boxX, boxY + boxH);
+    fctx.closePath();
+    fctx.fill();
+
+    // Subtle helper text
+    fctx.fillStyle = 'rgba(226, 232, 240, 0.45)';
+    fctx.font = '600 13px Arial, sans-serif';
+    fctx.textAlign = 'center';
+    fctx.fillText('EMPLOYEE PHOTO', boxX + boxW / 2, boxY + 205);
+    fctx.textAlign = 'left';
   }
   fctx.restore();
 
+  // 3. Subtle cyan/blue border with soft glow
+  fctx.save();
+  fctx.strokeStyle = 'rgba(56, 189, 248, 0.45)';
+  fctx.lineWidth = 2.5;
+  fctx.shadowColor = 'rgba(34, 211, 238, 0.25)';
+  fctx.shadowBlur = 12;
+  roundedRect(fctx, boxX, boxY, boxW, boxH, radius);
+  fctx.stroke();
+  fctx.restore();
+
+  fctx.restore();
+
+  // Employee Name
   const name = (document.getElementById('name').value || 'Full name').trim();
-  fctx.fillStyle = '#fff';
+  fctx.fillStyle = COLOR_TEXT_WHITE;
   fctx.font = "800 62px Arial, sans-serif";
   const nameLines = name.split(' ');
   let ny = 630;
@@ -317,9 +439,10 @@ function drawFront() {
     fctx.fillText(name, 44, ny);
   }
 
+  // Designation
   const desigRaw = (document.getElementById('designation').value || 'Designation').trim();
   const desigLines = desigRaw.split('\n');
-  fctx.fillStyle = '#d8d8d8';
+  fctx.fillStyle = COLOR_TEXT_LIGHT;
   fctx.font = "italic 400 30px Georgia, serif";
   let dy = ny + 100;
   desigLines.forEach((line) => {
@@ -327,15 +450,20 @@ function drawFront() {
     dy += 38;
   });
 
+  // Company Email with Electric Cyan Accent
   const email = (document.getElementById('email').value || '').trim();
-  fctx.fillStyle = GREEN;
-  fctx.font = "400 15px Arial, sans-serif";
+  fctx.fillStyle = COLOR_ACCENT_CYAN;
+  fctx.font = "600 15px Arial, sans-serif";
   fctx.fillText(email, 44, H - 80);
 
+  // Employee ID with Sleek Accent Treatment
   const empid = (document.getElementById('empid').value || 'EMP/ID/000').trim();
   fctx.textAlign = 'right';
   fctx.font = "italic 400 15px Georgia, serif";
+  fctx.fillStyle = COLOR_TEXT_MUTED;
   fctx.fillText('EMP ID :', W - 44, H - 100);
+  fctx.fillStyle = COLOR_ACCENT_CYAN;
+  fctx.font = "700 16px Arial, sans-serif";
   fctx.fillText(empid, W - 44, H - 80);
   fctx.textAlign = 'left';
 }
@@ -344,20 +472,22 @@ function drawBack() {
   bctx.setTransform(1, 0, 0, 1, 0, 0);
   bctx.clearRect(0, 0, backCanvas.width, backCanvas.height);
   bctx.setTransform(SCALE, 0, 0, SCALE, 0, 0);
-  bctx.fillStyle = '#0a0a0a';
-  bctx.fillRect(0, 0, W, H);
+
+  // Background matching front with deep navy gradient and subtle depth
+  drawCardBackground(bctx);
   drawWatermark(bctx);
 
   const marginX = 55;
   const fieldMaxWidth = 480;
   bctx.textAlign = 'left';
 
-  bctx.fillStyle = '#fff';
+  // Section 1: Personal Details
+  bctx.fillStyle = COLOR_TEXT_WHITE;
   bctx.font = "italic 400 26px Georgia, 'Times New Roman', serif";
   bctx.fillText('Personal Details', marginX, 44);
   const pdWidth = bctx.measureText('Personal Details').width;
-  bctx.strokeStyle = '#fff';
-  bctx.lineWidth = 1;
+  bctx.strokeStyle = COLOR_ACCENT_CYAN;
+  bctx.lineWidth = 2;
   bctx.beginPath();
   bctx.moveTo(marginX, 60);
   bctx.lineTo(marginX + pdWidth, 60);
@@ -367,11 +497,11 @@ function drawBack() {
 
   function fieldBlock(label, value) {
     bctx.font = "700 13px Arial, sans-serif";
-    bctx.fillStyle = '#8c8c8c';
+    bctx.fillStyle = COLOR_ACCENT_CYAN;
     bctx.fillText(label.toUpperCase(), marginX, py);
     py += 20;
     bctx.font = "400 17px Arial, sans-serif";
-    bctx.fillStyle = '#fff';
+    bctx.fillStyle = COLOR_TEXT_WHITE;
     const text = (value || '').trim() || '-';
     py = wrapLeftText(bctx, text, marginX, py, fieldMaxWidth, 22);
     py += 26;
@@ -384,13 +514,14 @@ function drawBack() {
 
   py += 14;
 
+  // Section 2: Terms & Conditions
   bctx.textAlign = 'center';
-  bctx.fillStyle = '#fff';
+  bctx.fillStyle = COLOR_TEXT_WHITE;
   bctx.font = "italic 400 34px Georgia, 'Times New Roman', serif";
   bctx.fillText('Terms & Conditions', W / 2, py);
   const titleWidth = bctx.measureText('Terms & Conditions').width;
-  bctx.strokeStyle = '#fff';
-  bctx.lineWidth = 1.5;
+  bctx.strokeStyle = COLOR_ACCENT_CYAN;
+  bctx.lineWidth = 2;
   bctx.beginPath();
   bctx.moveTo(W / 2 - titleWidth / 2, py + 18);
   bctx.lineTo(W / 2 + titleWidth / 2, py + 18);
@@ -404,7 +535,7 @@ function drawBack() {
     'Misuse or tampering of this card will lead to disciplinary action.'
   ];
   bctx.font = "400 21px Georgia, serif";
-  bctx.fillStyle = '#f0f0f0';
+  bctx.fillStyle = COLOR_TEXT_LIGHT;
   let ty = py;
   const maxWidth = 480;
   terms.forEach((term, idx) => {
@@ -414,12 +545,12 @@ function drawBack() {
   });
 
   bctx.font = "700 15px Arial, sans-serif";
-  bctx.fillStyle = '#fff';
+  bctx.fillStyle = COLOR_ACCENT_CYAN;
   bctx.fillText('If found, please return to:', W / 2, H - 150);
 
   const address = (document.getElementById('address').value || '').trim();
   bctx.font = "400 15px Arial, sans-serif";
-  bctx.fillStyle = '#ccc';
+  bctx.fillStyle = '#CBD5E1';
   wrapCenteredText(bctx, address, W / 2, H - 126, 460, 22);
 
   bctx.textAlign = 'left';
